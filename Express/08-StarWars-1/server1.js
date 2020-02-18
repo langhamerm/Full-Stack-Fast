@@ -21,6 +21,12 @@ var darthmaul = {
   forcePoints: 1200
 };
 
+var obi = {
+  name: "Obi Wan",
+  role: "Jedi",
+  age: 23,
+  forcePoints: 1000
+};
 // Create one more data entry for the character Obi Wan Kenobi.
 // Enter any values you like for the parameters following the same format as the Yoda and Darth Maul character
 //
@@ -43,6 +49,10 @@ app.get("/darthmaul", function(req, res) {
   res.json(darthmaul);
 });
 
+app.get("/obi", function(req, res) {
+  res.json(obi);
+});
+
 // Create a new Express route that leads users to the new Obi Wan Kenobi Data
 // Follow the same format as the Yoda and Darth Maul routes
 //
@@ -54,5 +64,5 @@ app.get("/darthmaul", function(req, res) {
 // Listener
 // ===========================================================
 app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+  console.log("http://localhost:" + PORT);
 });
